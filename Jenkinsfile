@@ -1,5 +1,6 @@
 pipeline {
          agent any
+        triggers{ cron('H/15 * * * *') }
          stages {
                  stage('One') {
                  steps {
@@ -17,5 +18,6 @@ pipeline {
                        echo 'Thanks for using Jenkins Pipeline'
                        }
                  }
+                  
               }
 }
